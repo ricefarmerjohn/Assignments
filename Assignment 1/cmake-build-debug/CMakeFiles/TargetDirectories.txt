@@ -2,5 +2,6 @@ E:/Projects/Assignments/Assignment 1/cmake-build-debug/CMakeFiles/Lab.dir
 E:/Projects/Assignments/Assignment 1/cmake-build-debug/CMakeFiles/Assignment1.dir
 E:/Projects/Assignments/Assignment 1/cmake-build-debug/CMakeFiles/Lab2.dir
 E:/Projects/Assignments/Assignment 1/cmake-build-debug/CMakeFiles/Converter.dir
+E:/Projects/Assignments/Assignment 1/cmake-build-debug/CMakeFiles/Assignment2.dir
 E:/Projects/Assignments/Assignment 1/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/Projects/Assignments/Assignment 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

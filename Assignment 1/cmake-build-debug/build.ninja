@@ -172,6 +172,39 @@ build Converter.exe: C_EXECUTABLE_LINKER__Converter_Debug CMakeFiles/Converter.d
   TARGET_IMPLIB = libConverter.dll.a
   TARGET_PDB = Converter.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Assignment2
+
+
+#############################################
+# Order-only phony target for Assignment2
+
+build cmake_object_order_depends_target_Assignment2: phony || CMakeFiles/Assignment2.dir
+
+build CMakeFiles/Assignment2.dir/Assignment2.c.obj: C_COMPILER__Assignment2_unscanned_Debug E$:/Projects/Assignments/Assignment$ 1/Assignment2.c || cmake_object_order_depends_target_Assignment2
+  DEP_FILE = CMakeFiles\Assignment2.dir\Assignment2.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Assignment2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Assignment2.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Assignment2
+
+
+#############################################
+# Link the executable Assignment2.exe
+
+build Assignment2.exe: C_EXECUTABLE_LINKER__Assignment2_Debug CMakeFiles/Assignment2.dir/Assignment2.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Assignment2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Assignment2.exe
+  TARGET_IMPLIB = libAssignment2.dll.a
+  TARGET_PDB = Assignment2.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -200,6 +233,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build Assignment1: phony Assignment1.exe
 
+build Assignment2: phony Assignment2.exe
+
 build Converter: phony Converter.exe
 
 build Lab: phony Lab.exe
@@ -214,7 +249,7 @@ build Lab2: phony Lab2.exe
 #############################################
 # Folder: E:/Projects/Assignments/Assignment 1/cmake-build-debug
 
-build all: phony Lab.exe Assignment1.exe Lab2.exe Converter.exe
+build all: phony Lab.exe Assignment1.exe Lab2.exe Converter.exe Assignment2.exe
 
 # =============================================================================
 # Built-in targets
