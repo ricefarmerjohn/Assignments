@@ -1,16 +1,27 @@
 #include <stdio.h>
 
+/*
+ * Description: This program is called the converter which will convert one unit to another.
+ */
 int main() {
-    int i, n = 0;
+    int i, n = 0, k = 0;
+    char ch;
     printf("Welcome to the converter, enter an integer listed below to enter the action associated with that integer\n");
     printf("1 for conversion between Kilograms and Pounds\n2 for conversion between Hectares and Acres\n3 for conversion between Litres and Gallons\n");
     printf("4 for conversion between Kilometre and Mile\n5 to quit\n");
     while(n != 1) {
         printf("Enter the integer here: ");
         scanf("%d", &i);
+        printf("Enter a character prompted below:");
         switch (i) {
             case 1:
-                printf("1 works\n");
+                printf("K for conversion from Kilograms to Pounds\nP for conversion from Pounds to Kilograms\n");
+                printf("Enter the character here: ");
+                ch = getchar();
+                if(ch == 'K' || ch == 'k'){
+                    printf("Please enter a value: ");
+                    scanf("%d", &k);
+                }
                 break;
             case 2:
                 printf("2 works\n");
