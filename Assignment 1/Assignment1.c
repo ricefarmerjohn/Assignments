@@ -17,7 +17,7 @@ int main() {
             case 1:
                 printf("K for conversion from Kilograms to Pounds\nP for conversion from Pounds to Kilograms\n");
                 printf("Enter the character here: ");
-                scanf("%c", &ch);
+                scanf(" %c", &ch);
 
                 break;
             case 2:
