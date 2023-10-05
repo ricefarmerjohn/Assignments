@@ -139,6 +139,39 @@ build Lab2.exe: C_EXECUTABLE_LINKER__Lab2_Debug CMakeFiles/Lab2.dir/Lab2.c.obj
   TARGET_IMPLIB = libLab2.dll.a
   TARGET_PDB = Lab2.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Converter
+
+
+#############################################
+# Order-only phony target for Converter
+
+build cmake_object_order_depends_target_Converter: phony || CMakeFiles/Converter.dir
+
+build CMakeFiles/Converter.dir/Converter.c.obj: C_COMPILER__Converter_unscanned_Debug E$:/Projects/Assignments/Assignment$ 1/Converter.c || cmake_object_order_depends_target_Converter
+  DEP_FILE = CMakeFiles\Converter.dir\Converter.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Converter.dir
+  OBJECT_FILE_DIR = CMakeFiles\Converter.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Converter
+
+
+#############################################
+# Link the executable Converter.exe
+
+build Converter.exe: C_EXECUTABLE_LINKER__Converter_Debug CMakeFiles/Converter.dir/Converter.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Converter.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Converter.exe
+  TARGET_IMPLIB = libConverter.dll.a
+  TARGET_PDB = Converter.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -167,6 +200,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build Assignment1: phony Assignment1.exe
 
+build Converter: phony Converter.exe
+
 build Lab: phony Lab.exe
 
 build Lab2: phony Lab2.exe
@@ -179,7 +214,7 @@ build Lab2: phony Lab2.exe
 #############################################
 # Folder: E:/Projects/Assignments/Assignment 1/cmake-build-debug
 
-build all: phony Lab.exe Assignment1.exe Lab2.exe
+build all: phony Lab.exe Assignment1.exe Lab2.exe Converter.exe
 
 # =============================================================================
 # Built-in targets

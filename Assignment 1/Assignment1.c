@@ -12,16 +12,13 @@ int main() {
     while(n != 1) {
         printf("Enter the integer here: ");
         scanf("%d", &i);
-        printf("Enter a character prompted below:");
+
         switch (i) {
             case 1:
                 printf("K for conversion from Kilograms to Pounds\nP for conversion from Pounds to Kilograms\n");
                 printf("Enter the character here: ");
-                ch = getchar();
-                if(ch == 'K' || ch == 'k'){
-                    printf("Please enter a value: ");
-                    scanf("%d", &k);
-                }
+                scanf("%c", &ch);
+
                 break;
             case 2:
                 printf("2 works\n");
