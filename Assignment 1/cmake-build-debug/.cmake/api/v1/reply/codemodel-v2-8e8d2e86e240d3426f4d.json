@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Assignment_1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Assignment1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Assignment1-Debug-c197db8f933e46e49c0a.json",
+					"name" : "Assignment1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Assignment2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Assignment2-Debug-16483a2f7ccbf0634fc5.json",
+					"name" : "Assignment2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Converter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Converter-Debug-3fbc24dc0c30d37ffeec.json",
+					"name" : "Converter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab-Debug-a8f60d66c1fceca1c4e0.json",
+					"name" : "Lab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab2-Debug-b80d52ea870239a17020.json",
+					"name" : "Lab2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Projects/Assignments/Assignment 1/cmake-build-debug",
+		"source" : "E:/Projects/Assignments/Assignment 1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
