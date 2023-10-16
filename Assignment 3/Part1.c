@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello, World!\n");
-    return 0;
+    int num;
+
+    printf("Please enter the number of integers to process: ");
+    scanf("%d", &num);
 }

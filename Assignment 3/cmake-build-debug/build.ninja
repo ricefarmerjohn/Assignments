@@ -73,6 +73,72 @@ build Part1.exe: C_EXECUTABLE_LINKER__Part1_Debug CMakeFiles/Part1.dir/Part1.c.o
   TARGET_IMPLIB = libPart1.dll.a
   TARGET_PDB = Part1.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target reverse_using_sizeof
+
+
+#############################################
+# Order-only phony target for reverse_using_sizeof
+
+build cmake_object_order_depends_target_reverse_using_sizeof: phony || CMakeFiles/reverse_using_sizeof.dir
+
+build CMakeFiles/reverse_using_sizeof.dir/reverse_using_sizeof.c.obj: C_COMPILER__reverse_using_sizeof_unscanned_Debug E$:/Projects/Assignments/Assignment$ 3/reverse_using_sizeof.c || cmake_object_order_depends_target_reverse_using_sizeof
+  DEP_FILE = CMakeFiles\reverse_using_sizeof.dir\reverse_using_sizeof.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\reverse_using_sizeof.dir
+  OBJECT_FILE_DIR = CMakeFiles\reverse_using_sizeof.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target reverse_using_sizeof
+
+
+#############################################
+# Link the executable reverse_using_sizeof.exe
+
+build reverse_using_sizeof.exe: C_EXECUTABLE_LINKER__reverse_using_sizeof_Debug CMakeFiles/reverse_using_sizeof.dir/reverse_using_sizeof.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\reverse_using_sizeof.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = reverse_using_sizeof.exe
+  TARGET_IMPLIB = libreverse_using_sizeof.dll.a
+  TARGET_PDB = reverse_using_sizeof.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target days_in_year_converter
+
+
+#############################################
+# Order-only phony target for days_in_year_converter
+
+build cmake_object_order_depends_target_days_in_year_converter: phony || CMakeFiles/days_in_year_converter.dir
+
+build CMakeFiles/days_in_year_converter.dir/days_in_year_converter.c.obj: C_COMPILER__days_in_year_converter_unscanned_Debug E$:/Projects/Assignments/Assignment$ 3/days_in_year_converter.c || cmake_object_order_depends_target_days_in_year_converter
+  DEP_FILE = CMakeFiles\days_in_year_converter.dir\days_in_year_converter.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\days_in_year_converter.dir
+  OBJECT_FILE_DIR = CMakeFiles\days_in_year_converter.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target days_in_year_converter
+
+
+#############################################
+# Link the executable days_in_year_converter.exe
+
+build days_in_year_converter.exe: C_EXECUTABLE_LINKER__days_in_year_converter_Debug CMakeFiles/days_in_year_converter.dir/days_in_year_converter.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\days_in_year_converter.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = days_in_year_converter.exe
+  TARGET_IMPLIB = libdays_in_year_converter.dll.a
+  TARGET_PDB = days_in_year_converter.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -101,6 +167,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build Part1: phony Part1.exe
 
+build days_in_year_converter: phony days_in_year_converter.exe
+
+build reverse_using_sizeof: phony reverse_using_sizeof.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -109,7 +179,7 @@ build Part1: phony Part1.exe
 #############################################
 # Folder: E:/Projects/Assignments/Assignment 3/cmake-build-debug
 
-build all: phony Part1.exe
+build all: phony Part1.exe reverse_using_sizeof.exe days_in_year_converter.exe
 
 # =============================================================================
 # Built-in targets

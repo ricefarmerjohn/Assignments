@@ -1,5 +1,4 @@
 #include <stdio.h>
-// I have this one lab because of one reason, the formatting sucks ass
 int main(){
     int n, i;
     printf("Enter number of days in month: ");

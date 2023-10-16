@@ -1,3 +1,5 @@
 E:/Projects/Assignments/Assignment 3/cmake-build-debug/CMakeFiles/Part1.dir
+E:/Projects/Assignments/Assignment 3/cmake-build-debug/CMakeFiles/reverse_using_sizeof.dir
+E:/Projects/Assignments/Assignment 3/cmake-build-debug/CMakeFiles/days_in_year_converter.dir
 E:/Projects/Assignments/Assignment 3/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/Projects/Assignments/Assignment 3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

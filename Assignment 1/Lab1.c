@@ -5,7 +5,7 @@ int main() {
     printf("Enter four integers:  ");
     scanf(" %d %d %d %d", &n1,&n2,&n3,&n4);
 
-    // This is to test out which of these little sharts are the smaller one
+    // This is to test out which of these are the smaller one
     if(n1 < n2){
         small1 = n1;
         large1 = n2;
