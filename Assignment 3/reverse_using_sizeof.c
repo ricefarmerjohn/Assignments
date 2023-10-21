@@ -17,5 +17,6 @@ int main(void)
         printf(" %d", a[i]);
     printf("\n");
 
+
     return 0;
 }
