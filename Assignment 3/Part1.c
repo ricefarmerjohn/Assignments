@@ -70,7 +70,13 @@ void part6(int *arr, int arrNum){
 }
 int main() {
     int num;
+<<<<<<< HEAD
     int total = 0;
+=======
+
+
+    // Get user input, then put input into array to define the length
+>>>>>>> 477329bbb8bbb1e0c4a1ef8a17c7ab490263c3be
     printf("Please enter the number of integers to process: ");
     scanf("%d", &num);
     int arr[num];
