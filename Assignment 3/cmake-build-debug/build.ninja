@@ -139,6 +139,39 @@ build days_in_year_converter.exe: C_EXECUTABLE_LINKER__days_in_year_converter_De
   TARGET_IMPLIB = libdays_in_year_converter.dll.a
   TARGET_PDB = days_in_year_converter.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target tester
+
+
+#############################################
+# Order-only phony target for tester
+
+build cmake_object_order_depends_target_tester: phony || CMakeFiles/tester.dir
+
+build CMakeFiles/tester.dir/tester.c.obj: C_COMPILER__tester_unscanned_Debug E$:/Projects/Assignments/Assignment$ 3/tester.c || cmake_object_order_depends_target_tester
+  DEP_FILE = CMakeFiles\tester.dir\tester.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\tester.dir
+  OBJECT_FILE_DIR = CMakeFiles\tester.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tester
+
+
+#############################################
+# Link the executable tester.exe
+
+build tester.exe: C_EXECUTABLE_LINKER__tester_Debug CMakeFiles/tester.dir/tester.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\tester.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = tester.exe
+  TARGET_IMPLIB = libtester.dll.a
+  TARGET_PDB = tester.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -171,6 +204,8 @@ build days_in_year_converter: phony days_in_year_converter.exe
 
 build reverse_using_sizeof: phony reverse_using_sizeof.exe
 
+build tester: phony tester.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -179,7 +214,7 @@ build reverse_using_sizeof: phony reverse_using_sizeof.exe
 #############################################
 # Folder: E:/Projects/Assignments/Assignment 3/cmake-build-debug
 
-build all: phony Part1.exe reverse_using_sizeof.exe days_in_year_converter.exe
+build all: phony Part1.exe reverse_using_sizeof.exe days_in_year_converter.exe tester.exe
 
 # =============================================================================
 # Built-in targets
