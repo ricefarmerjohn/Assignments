@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f1174942-90a6-48bc-b8d2-30a9d9f7cb86" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assignment 3/tester.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/Part1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/Part1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7566631ec1782c3865fb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/.cmake/api/v1/reply/index-2023-10-15T23-26-21-0459.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/Part1.dir/Part1.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/Part1.dir/Part1.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/Part1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/Part1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 3/cmake-build-debug/build.ninja" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2XEYPHrI5xDPBPQD3OCv2cmxS6K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Projects/Assignments/Assignment 3",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1174942-90a6-48bc-b8d2-30a9d9f7cb86" name="Changes" comment="" />
+      <created>1698195680461</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698195680461</updated>
+      <workItem from="1698195681467" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

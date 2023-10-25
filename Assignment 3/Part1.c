@@ -159,9 +159,6 @@ void part6(int *arr, int arrNum){
     }
 }
 
-/**
- *
- */
 int main() {
     int num;
 
