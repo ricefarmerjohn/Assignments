@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "Assignment5",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Assignment5::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Assignment5-Debug-477318a992cf591e4719.json",
+					"jsonFile" : "target-Assignment5-Debug-0bc710ff7468e60c5466.json",
 					"name" : "Assignment5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-f7b8ac99c3b0da28cc56.json",
+					"name" : "main",
 					"projectIndex" : 0
 				}
 			]

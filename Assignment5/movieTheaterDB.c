@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "movieTheaterDB.h"
 #include "movieTheaterDB_movie.h"
 
 int main() {
+    struct movie* movieList = NULL;
+    struct actor* actorList = NULL;
+
     char input;
 
     // Display welcome message
@@ -22,9 +26,24 @@ int main() {
         // Get user input for operation code
         printf("Enter operation code: ");
         scanf(" %c", &input);
-
-        switch(input){
-
+        input = tolower(input);
+        switch (input) {
+            case 'q':
+                printf("Exiting the cinema, hope you enjoyed your stay.\n");
+                break;
+            case 'h':
+                printf("Hello");
+                break;
+            case 'a':
+                printf("Almost");
+                break;
+            case 'm':
+                movieList = movieMenu(movieList); // Override that bitch
+                break;
+            default:
+                printf("Invalid operation code, please try again.\n");
+                break;
         }
     }
+    return 0;
 }
