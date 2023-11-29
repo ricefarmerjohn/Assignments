@@ -3,4 +3,5 @@ project(Assignment5 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Assignment5 main.c)
+add_executable(Assignment5 movieTheaterDB.c
+        movieTheaterDB.h)
