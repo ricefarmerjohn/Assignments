@@ -9,7 +9,7 @@
 struct movie *check(struct movie *list, int code){
     struct movie *p;
 
-    for(p = list; p != NULL && code > p->movieCode; p = p->next){
+    for(p = list; p != NULL; p = p->next){
         if(p != NULL && code == p->movieCode){
             return p;
         }
@@ -90,16 +90,13 @@ void update(struct movie *list){
     scanf("%d", &code);
     p = check(list,code);
     if (p != NULL) {
-        printf("Enter a new movie code: ");
-        scanf("d", &code);
-
-        printf("Enter movie name: ");
+        printf("Enter the new movie name: ");
         scanf(" %s", p->movieName);
 
-        printf("Enter movie genre: ");
+        printf("Enter the new movie genre: ");
         scanf(" %s", p->movieGenre);
 
-        printf("Enter movie rating [0.0 - 10.0]: ");
+        printf("Enter the new movie rating [0.0 - 10.0]: ");
         scanf("%f", &temp);
         if (temp < 0.0 || temp > 10.0) {
             // If rating is not within the valid range, return without adding the movie
@@ -112,19 +109,23 @@ void update(struct movie *list){
         printf("Movie code not found.\n");
 }
 
-struct movie *delete(struct movie *list, int code){
+struct movie *delete(struct movie *list){
     struct movie *cur, *prev;
-    for (cur = list, prev = NULL;
-         cur != NULL && cur->movieCode != code;
-         prev = cur, cur = cur->next)
-        ;
-    if (cur == NULL)
-        return list; /* n was not found */
-    if (prev == NULL)
-        list = list->next; /* n is in the first node */
-    else
-        prev->next = cur->next; /* n is in some other node */
-    free(cur);
+    int code;
+    printf("Enter the movie code for the movie to be deleted: ");
+    scanf("%d", &code);
+    for (cur = list, prev = NULL; cur != NULL && cur->movieCode != code; prev = cur, cur = cur->next);
+
+    if (cur == NULL) {
+        return list;
+    }
+    if (prev == NULL) {
+        list = list->next;
+    } else {
+        prev->next = cur->next;
+        free(cur);
+    }/* n is in some other node */
+
     return list;
 }
 
@@ -139,7 +140,8 @@ struct movie *movieMenu(struct movie *list){
                "[2] Press 'u' to update a movie within the database\n"
                "[3] Press 's' to search for a movie within the database\n"
                "[4] Press 'p' to list all of the recorded movies within the database\n"
-               "[5] Press 'q' to exit out of the movie database\n");
+               "[5] Press 'e' to delete a movie out of the movie database\n"
+               "[6] Press 'q' to exit out of the movie database\n");
 
         // Get user input for operation code
         printf("Enter operation code: ");
@@ -163,9 +165,10 @@ struct movie *movieMenu(struct movie *list){
                 search(list);
                 break;
             case 'e':
+                list = delete(list);
                 break;
             default:
-                printf("Invalid operation code, please try again\n");
+                printf("invalid command code");
                 break;
         }
     }
