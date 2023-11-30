@@ -4,14 +4,26 @@
 #include <ctype.h>
 #include "movieTheaterDB.h"
 #include "movieTheaterDB_movie.h"
+// Works
 
-void insert(struct movie *list, int n){
+struct movie *check(struct movie *list, int code){
+    struct movie *p;
+
+    for(p = list; p != NULL && code > p->movieCode; p = p->next){
+        if(p != NULL && code == p->movieCode){
+            return p;
+        }
+    }
+    return NULL;
+}
+
+struct movie* insert(struct movie *list){
     float temp;
     struct movie *cur, *prev, *newNode;
     newNode = malloc(sizeof(struct movie));
     if (newNode == NULL) {
-        printf("Database is full; can't add more parts.\n");
-        return;
+        printf("Database is full; can't add more movies.\n");
+        return list;
     }
     printf("Enter movie number: ");
     scanf("%d", &newNode->movieCode);
@@ -20,7 +32,7 @@ void insert(struct movie *list, int n){
         if (cur != NULL && newNode->movieCode == cur->movieCode) {
             printf("Code already exists.\n");
             free(newNode);
-            return;
+            return list;
     }
 
     printf("Enter movie name: ");
@@ -33,7 +45,7 @@ void insert(struct movie *list, int n){
     scanf("%f", &temp);
     if (temp < 0.0 || temp > 10.0) {
         // If rating is not within the valid range, return without adding the movie
-        return;
+        return list;
     } else {
         newNode->movieRating = temp;
     }
@@ -44,14 +56,21 @@ void insert(struct movie *list, int n){
     }else {
         prev->next = newNode;
     }
+    return list;
 }
 
-struct movie *search_list(struct movie *list, int code){
-    struct movie *p;
-    for (p = list; p != NULL; p = p->next)
-        if (p->movieCode == code)
-            return p;
-    return NULL;
+// Works :3
+void search(struct movie *list){
+    struct movie *node;
+    int code;
+    printf("Enter movie number: ");
+    scanf("%d", &code);
+    for (node = list; node != NULL; node = node->next) {
+        if (node->movieCode == code) {
+            printf("%-12d %-26s %-25s %.1f\n", node->movieCode, node->movieName, node->movieGenre, node->movieRating);
+        }
+    }
+    printf("Invalid movie code");
 }
 
 // 99% sure this is done
@@ -63,8 +82,34 @@ void print(struct movie *list) {
     }
 }
 
-void update(struct movie *list, int code){
+void update(struct movie *list){
+    float temp;
+    int code;
+    struct movie *p;
+    printf("Enter the movie code: ");
+    scanf("%d", &code);
+    p = check(list,code);
+    if (p != NULL) {
+        printf("Enter a new movie code: ");
+        scanf("d", &code);
 
+        printf("Enter movie name: ");
+        scanf(" %s", p->movieName);
+
+        printf("Enter movie genre: ");
+        scanf(" %s", p->movieGenre);
+
+        printf("Enter movie rating [0.0 - 10.0]: ");
+        scanf("%f", &temp);
+        if (temp < 0.0 || temp > 10.0) {
+            // If rating is not within the valid range, return without adding the movie
+            return;
+        } else {
+            p->movieRating = temp;
+        }
+
+    } else
+        printf("Movie code not found.\n");
 }
 
 struct movie *delete(struct movie *list, int code){
@@ -106,16 +151,16 @@ struct movie *movieMenu(struct movie *list){
                 printf("Exiting the movie database.\n");
                 break;
             case 'i':
-                insert(list,count);
+                list = insert(list);
                 break;
             case 'p':
                 print(list);
                 break;
             case 'u':
-                printf("Sorry idk what I'm doing 3");
+                update(list);
                 break;
             case 's':
-                printf("Sorry idk what I'm doing 4");
+                search(list);
                 break;
             case 'e':
                 break;

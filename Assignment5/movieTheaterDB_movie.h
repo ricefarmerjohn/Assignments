@@ -2,9 +2,10 @@
 #define ASSIGNMENT5_MOVIETHEATERDB_MOVIE_H
 
 struct movie *movieMenu(struct movie *list);
-struct movie *search(struct movie *list, int code);
-void insert(struct movie *list, int code);
-void update(struct movie *list, int code);
+struct movie *check(struct movie *list, int code);
+struct movie* insert(struct movie *list);
+void search(struct movie *list);
+void update(struct movie *list);
 void print(struct movie *list);
 struct movie *delete(struct movie *list, int code);
 
