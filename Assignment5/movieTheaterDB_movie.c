@@ -4,35 +4,40 @@
 #include <ctype.h>
 #include "movieTheaterDB.h"
 #include "movieTheaterDB_movie.h"
-// Works
 
-struct movie *check(struct movie *list, int code){
+// Function to check if a movie with the given code exists in the database
+struct movie *movieCheck(struct movie *list, int code) {
     struct movie *p;
-
-    for(p = list; p != NULL; p = p->next){
-        if(p != NULL && code == p->movieCode){
+    // Loops through the entire list to check
+    for (p = list; p != NULL; p = p->next) {
+        if (p != NULL && code == p->movieCode) {
             return p;
         }
     }
+    // Returns null if it's not in the list
     return NULL;
 }
 
-struct movie* insert(struct movie *list){
+// Function to insert a new movie into the database
+struct movie *movieInsert(struct movie *list) {
     float temp;
     struct movie *cur, *prev, *newNode;
     newNode = malloc(sizeof(struct movie));
+
+    // Checks if the database is full
     if (newNode == NULL) {
         printf("Database is full; can't add more movies.\n");
         return list;
     }
+
     printf("Enter movie number: ");
     scanf("%d", &newNode->movieCode);
-
-    for (cur = list, prev = NULL; cur != NULL && newNode->movieCode > cur->movieCode; prev = cur, cur = cur->next);
-        if (cur != NULL && newNode->movieCode == cur->movieCode) {
-            printf("Code already exists.\n");
-            free(newNode);
-            return list;
+    // Loops through the database to check if the code exists
+    for (cur = list, prev = NULL; cur != NULL; prev = cur, cur = cur->next);
+    if (cur != NULL && newNode->movieCode == cur->movieCode) {
+        printf("Code already exists.\n");
+        free(newNode);
+        return list;
     }
 
     printf("Enter movie name: ");
@@ -45,6 +50,7 @@ struct movie* insert(struct movie *list){
     scanf("%f", &temp);
     if (temp < 0.0 || temp > 10.0) {
         // If rating is not within the valid range, return without adding the movie
+        printf("Invalid rating\n");
         return list;
     } else {
         newNode->movieRating = temp;
@@ -53,42 +59,47 @@ struct movie* insert(struct movie *list){
     newNode->next = cur;
     if (prev == NULL) {
         list = newNode;
-    }else {
+    } else {
         prev->next = newNode;
     }
     return list;
 }
 
-// Works :3
-void search(struct movie *list){
+// Function to search for a movie in the database
+void movieSearch(struct movie *list) {
     struct movie *node;
     int code;
     printf("Enter movie number: ");
     scanf("%d", &code);
+    // Loops through the database to find the movie code
     for (node = list; node != NULL; node = node->next) {
         if (node->movieCode == code) {
+            printf("Movie Code   Movie Name                 Movie Genre               Movie Rating\n");
             printf("%-12d %-26s %-25s %.1f\n", node->movieCode, node->movieName, node->movieGenre, node->movieRating);
+            break;
         }
     }
-    printf("Invalid movie code");
+    printf("Invalid movie code\n");
 }
 
-// 99% sure this is done
-void print(struct movie *list) {
+// Function to print all movies in the database
+void moviePrint(struct movie *list) {
     struct movie *p;
     printf("Movie Code   Movie Name                 Movie Genre               Movie Rating\n");
     for (p = list; p != NULL; p = p->next) {
+        // Prints out information in specific format
         printf("%-12d %-26s %-25s %.1f\n", p->movieCode, p->movieName, p->movieGenre, p->movieRating);
     }
 }
 
-void update(struct movie *list){
+// Function to update information for a movie in the database
+void movieUpdate(struct movie *list) {
     float temp;
     int code;
     struct movie *p;
     printf("Enter the movie code: ");
     scanf("%d", &code);
-    p = check(list,code);
+    p = movieCheck(list, code);
     if (p != NULL) {
         printf("Enter the new movie name: ");
         scanf(" %s", p->movieName);
@@ -99,17 +110,19 @@ void update(struct movie *list){
         printf("Enter the new movie rating [0.0 - 10.0]: ");
         scanf("%f", &temp);
         if (temp < 0.0 || temp > 10.0) {
-            // If rating is not within the valid range, return without adding the movie
+            // If rating is not within the valid range, return without updating the movie
             return;
         } else {
             p->movieRating = temp;
         }
 
-    } else
+    } else {
         printf("Movie code not found.\n");
+    }
 }
 
-struct movie *delete(struct movie *list){
+// Function to erase a movie from the database
+struct movie *movieErase(struct movie *list) {
     struct movie *cur, *prev;
     int code;
     printf("Enter the movie code for the movie to be deleted: ");
@@ -124,13 +137,13 @@ struct movie *delete(struct movie *list){
     } else {
         prev->next = cur->next;
         free(cur);
-    }/* n is in some other node */
+    }
 
     return list;
 }
 
-struct movie *movieMenu(struct movie *list){
-    int count = 0;
+// Function to handle the movie database menu and operations
+struct movie *movieMenu(struct movie *list) {
     char input;
 
     while (input != 'q') {
@@ -140,7 +153,7 @@ struct movie *movieMenu(struct movie *list){
                "[2] Press 'u' to update a movie within the database\n"
                "[3] Press 's' to search for a movie within the database\n"
                "[4] Press 'p' to list all of the recorded movies within the database\n"
-               "[5] Press 'e' to delete a movie out of the movie database\n"
+               "[5] Press 'e' to erase a movie out of the movie database\n"
                "[6] Press 'q' to exit out of the movie database\n");
 
         // Get user input for operation code
@@ -153,26 +166,24 @@ struct movie *movieMenu(struct movie *list){
                 printf("Exiting the movie database.\n");
                 break;
             case 'i':
-                list = insert(list);
+                list = movieInsert(list);
                 break;
             case 'p':
-                print(list);
+                moviePrint(list);
                 break;
             case 'u':
-                update(list);
+                movieUpdate(list);
                 break;
             case 's':
-                search(list);
+                movieSearch(list);
                 break;
             case 'e':
-                list = delete(list);
+                list = movieErase(list);
                 break;
             default:
-                printf("invalid command code");
+                printf("Invalid operation code\n");
                 break;
         }
     }
     return list;
 }
-
-
